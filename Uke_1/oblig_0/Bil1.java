@@ -6,6 +6,6 @@ public class Bil1 {
     }
 
     public void hei2() {
-        System.out.println("Meow");
+        System.out.println("Du er en bil");
     }
 }
