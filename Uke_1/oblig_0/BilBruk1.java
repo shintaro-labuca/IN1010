@@ -6,6 +6,7 @@ public class BilBruk1 {
     bil.hei();
     bil.hei2();
     
+    
     }
 }
 
