@@ -1,0 +1,3 @@
+class Stabel <E> extends Lenkeliste<E> {
+    // ...
+}
