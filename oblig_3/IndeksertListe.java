@@ -6,22 +6,16 @@ class IndeksertListe <E> extends Lenkeliste<E> {
 
         if (pos < 0 || pos > this.størrelse()) {
             throw new UgyldigListeindeks(pos);
-        }
-
-        else if (pos == 0) {
+        } else if (pos == 0) {
             nyttElement.neste = hode;
             hode = nyttElement;
             if (hale == null) {
                 hale = hode;
             }
-        }
-
-        else if (pos == størrelse()) {
+        } else if (pos == størrelse()) {
             hale.neste = nyttElement;
             hale = nyttElement;
-        }
-
-        else {
+        } else {
             Node peker = hode;
             for (int i = 0; i < pos - 1; i++) {
                 peker = peker.neste;
@@ -66,9 +60,8 @@ class IndeksertListe <E> extends Lenkeliste<E> {
                 hale = null;
             }
 	        return data;
-        }
 
-        else if (pos == størrelse() - 1) {
+        } else if (pos == størrelse() - 1) {
             Node peker = hode;
             for (int i = 0; i < pos - 1; i++) {
                 peker = peker.neste;
@@ -77,9 +70,7 @@ class IndeksertListe <E> extends Lenkeliste<E> {
             peker.neste = null;
             hale = peker;
             return data;
-        }
-
-        else {
+        } else {
             Node peker = hode;
             for (int i = 0; i < pos - 1; i++) {
                     peker = peker.neste;
