@@ -1,0 +1,216 @@
+> java Legesystem legedata.txt
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 1
+# Pasienter (navn, fnr)
+Jens Hans Olsen,11111143521
+Petrolina Swiq,24120099343
+Sven Svendsen,10111224244
+Juni Olsen,21049563451
+# Legemidler (navn,type,pris,virkestoff,[styrke])
+Predizol,narkotisk,450,75.0,8
+Paralgin Forte,vanedannende,65,400.0,5
+Placebo Pianissimo,vanlig,10,0.0
+Ibux,vanlig,240,200.0
+# Leger (navn,kontrollkode / 0 hvis vanlig lege)
+Dr. Cox,0
+Dr. Hillestad Lovold,98765
+Dr. House,12345
+Dr. Wilson,0
+# Resepter (legemiddelNummer,legeNavn,pasientID,type,[reit])
+1,Dr. Cox,2,hvit,7
+0,Dr. Hillestad Lovold,3,blaa,1000
+2,Dr. House,1,militaer
+3,Dr. Hillestad Lovold,3,p,25
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 2
+Totalt 1 resepter paa vanedannende
+Totalt 1 resepter paa narkotiske
+Leger som har skrevet ut resept paa narkotiske:
+  Dr. Hillestad Lovold (1 stk)
+Pasienter som har faatt resept paa narkotiske:
+  Juni Olsen (1 stk)
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 3
+Navn? Dr. Seuss
+Kontroll-id (0 hvis ikke spesialist)? 2357
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 4
+Navn? Aerius
+Pris? 149
+Mengde virkestoff? 5
+Er det
+Alternativer:
+0. vanlig
+1. narkotisk
+2. vanedannende
+? 0
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 5
+Navn? Alice
+Foedselsnummer? 0101651234
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 6
+Legemiddel? Aerius
+Lege? Dr. Seuss
+Pasient-ID? 4
+Alternativer:
+0. hvit resept
+1. blaa resept
+2. militaer resept
+3. resept paa preventiver
+? 0
+Reit? 12
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? b
+Du maa svare med et heltall.
+7
+Resept ID? 4
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 1
+# Pasienter (navn, fnr)
+Jens Hans Olsen,11111143521
+Petrolina Swiq,24120099343
+Sven Svendsen,10111224244
+Juni Olsen,21049563451
+Alice,0101651234
+# Legemidler (navn,type,pris,virkestoff,[styrke])
+Predizol,narkotisk,450,75.0,8
+Paralgin Forte,vanedannende,65,400.0,5
+Placebo Pianissimo,vanlig,10,0.0
+Ibux,vanlig,240,200.0
+Aerius,vanlig,149,5.0
+# Leger (navn,kontrollkode / 0 hvis vanlig lege)
+Dr. Cox,0
+Dr. Hillestad Lovold,98765
+Dr. House,12345
+Dr. Seuss,2357
+Dr. Wilson,0
+# Resepter (legemiddelNummer,legeNavn,pasientID,type,[reit])
+1,Dr. Cox,2,hvit,7
+0,Dr. Hillestad Lovold,3,blaa,1000
+2,Dr. House,1,militaer
+3,Dr. Hillestad Lovold,3,p,25
+4,Dr. Seuss,4,hvit,11
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 2
+Totalt 1 resepter paa vanedannende
+Totalt 1 resepter paa narkotiske
+Leger som har skrevet ut resept paa narkotiske:
+  Dr. Hillestad Lovold (1 stk)
+Pasienter som har faatt resept paa narkotiske:
+  Juni Olsen (1 stk)
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 8
+Navn paa datafil? legedata-etter-endring.txt
+Alle data skrevet paa legedata-etter-endring.txt.
+
+Alternativer:
+0. Avslutt
+1. Skriv ut alle data
+2. Skriv ut statistikk
+3. Legg til lege
+4. Legg til legemiddel
+5. Legg til pasient
+6. Legg til resept
+7. Bruk resept
+8. Skrive ut alle data paa fil
+? 0
