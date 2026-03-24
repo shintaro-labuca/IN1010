@@ -34,11 +34,10 @@ abstract class Lenkeliste <E> implements Liste<E> {
     @Override
     public String toString () {
         String info = "";
-        while (hode != null) {
-            info += hode.data + "\n";
-            hode = hode.neste;
-        }   
-	    return info; 
+        for (E element : this) {
+            info += element;
+        }
+        return info;
     }
 
     @Override
