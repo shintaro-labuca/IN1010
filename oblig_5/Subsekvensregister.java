@@ -8,7 +8,7 @@ public class Subsekvensregister {
     private static final int SUBSEKVENSLENGDE = 3;
 
     public Subsekvensregister() {
-    this.register = new ArrayList<>();
+    this.register = new ArrayList<Frekvenstabell>();
     }
 
     public void settInn (Frekvenstabell f) {
