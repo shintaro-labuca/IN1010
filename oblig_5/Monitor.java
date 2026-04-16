@@ -18,9 +18,9 @@ public class Monitor {
         lås.lock();
         try {
             register.settInn(f);
+            nokTabeller.signalAll();
         } finally {
             lås.unlock();
-            nokTabeller.signalAll();
         }
     }
 
