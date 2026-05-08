@@ -7,4 +7,10 @@ public class SortRute extends Rute {
     public String toString() {
         return "#";
     }
+
+    @Override
+    public void finn(Rute fra) {
+        // Gjør ingenting, siden det er sort rute
+        System.out.println("Du kan ikke starte på en sort rute.");
+    }
 }

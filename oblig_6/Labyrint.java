@@ -6,8 +6,9 @@ public class Labyrint {
     private int antRader;
     private int antKolonner;
     private Rute[][] ruter;
+    protected boolean fantÅpning;
 
-    public Labyrint(String filnavn) {
+    public Labyrint(String filnavn) { // Leser rutenett, og lager Rute-objekter basert på tegnet
         try {
         Scanner s = new Scanner(new File(filnavn));
             antRader = s.nextInt();
@@ -20,7 +21,7 @@ public class Labyrint {
                     char tegn = linje.charAt(kol);
                     if (tegn == '#') {
                             ruter[rad][kol] = new SortRute(rad, kol, this);
-                    } else if (rad == 0 || rad == antRader - 1 || kol == 0 || kol == antKolonner - 1) {
+                    } else if (rad == 0 || rad == antRader - 1 || kol == 0 || kol == antKolonner - 1) { // Hvis kant, så åpning
                             ruter[rad][kol] = new Åpning(rad, kol, this);
                     } else {
                             ruter[rad][kol] = new HvitRute(rad, kol, this);
@@ -33,7 +34,7 @@ public class Labyrint {
             System.exit(1);
         }
 
-        for (int rad = 0; rad < antRader; rad++) {
+        for (int rad = 0; rad < antRader; rad++) { // Setter naboer, setter nord,syd,øst,vest til å peke på naboer
             for (int kol = 0; kol < antKolonner; kol++) {
                 if (rad > 0) {ruter[rad][kol].nord = ruter[rad - 1][kol];}
                 if (rad < antRader - 1) {ruter[rad][kol].syd = ruter[rad + 1][kol];}
@@ -42,16 +43,22 @@ public class Labyrint {
             }
         }
     }
+
     @Override
     public String toString() {
         String labyrint = "";
         for (Rute[] rad : ruter) {
             for (Rute rute : rad) {
-                labyrint += rute.toString();
+                labyrint += rute.toString() + " ";
             }
         labyrint += "\n";
         }
         return labyrint;
     }
 
+    public void finnUtveiFra(int rad, int kol) {
+        fantÅpning = false;
+        ruter[rad][kol].finn(null);
+        if (!fantÅpning) {System.out.println("Ingen åpninger funnet fra startkoordinaten.");}
+    }
 }

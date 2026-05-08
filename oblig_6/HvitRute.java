@@ -7,4 +7,12 @@ public class HvitRute extends Rute {
     public String toString() {
         return ".";
     }
+
+    @Override
+    public void finn (Rute fra) {
+        Rute[] naboer = {nord, syd, vest, øst};
+        for (Rute nabo : naboer) {
+            if (nabo != null && nabo != fra) {nabo.finn(this);}
+        }
+    }
 }

@@ -1,7 +1,7 @@
 public abstract class Rute {
-    private int radnummer;
-    private int kolonnenummer;
-    private Labyrint labyrint;
+    protected int radnummer;
+    protected int kolonnenummer;
+    protected Labyrint labyrint;
     protected Rute nord, syd, vest, øst;
 
     public Rute(int rad, int kol, Labyrint lab) {
@@ -9,4 +9,6 @@ public abstract class Rute {
         kolonnenummer = kol;
         labyrint = lab;
     }
+
+    public void finn (Rute fra) {}
 }
