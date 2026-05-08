@@ -58,7 +58,18 @@ public class Labyrint {
 
     public void finnUtveiFra(int rad, int kol) {
         fantÅpning = false;
+
+        if (ruter[rad][kol] instanceof SortRute) {
+            System.out.println("Du kan ikke starte på en sort rute.");
+            return;
+        }
+
+        System.out.println("Åpninger: ");
         ruter[rad][kol].finn(null);
-        if (!fantÅpning) {System.out.println("Ingen åpninger funnet fra startkoordinaten.");}
+
+        if (!fantÅpning) {
+            System.out.println("Ingen åpninger funnet fra startkoordinaten.");
+        }
+
     }
 }

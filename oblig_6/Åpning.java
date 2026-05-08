@@ -6,6 +6,6 @@ public class Åpning extends HvitRute {
     @Override
     public void finn(Rute fra) {
         labyrint.fantÅpning = true;
-        System.out.println("Åpninger: \n \n" + "(" + radnummer + "," + kolonnenummer + ") \n \n");
+        System.out.println("(" + radnummer + "," + kolonnenummer + ")\n");
     }
 }

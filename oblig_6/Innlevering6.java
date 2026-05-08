@@ -9,20 +9,22 @@ public class Innlevering6 {
         System.out.println("Slik ser labyrinten ut: \n \n" + labyrint);
 
         Scanner s = new Scanner(System.in);
+        System.out.println("Skriv startkoordinatene: <rad> <kolonne> (-1 for å avslutte)");
         String linje = s.nextLine();
 
-        System.out.println("Skriv startkoordinatene: <rad> <kolonne> (-1 for å avslutte)");
         while (!linje.equals("-1")) {
             try {
                 String[] deler = linje.split(" ");
                 int rad = Integer.parseInt(deler[0]);
                 int kol = Integer.parseInt(deler[1]);
                 labyrint.finnUtveiFra(rad, kol);
+                
             } catch (Exception e) {
-                System.out.println("Ugyldig input, prøv igjen.");
+                System.out.println("Ugyldig input, prøv igjen.\n");
             }
-            s.nextLine();
+            linje = s.nextLine();
         }
+        System.out.println("Program avsluttet.");
         s.close();
     }
 }
