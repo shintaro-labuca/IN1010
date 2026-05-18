@@ -3,6 +3,7 @@ public abstract class Rute {
     protected int kolonnenummer;
     protected Labyrint labyrint;
     protected Rute nord, syd, vest, øst;
+    static int globalTeller;
 
     public Rute(int rad, int kol, Labyrint lab) {
         radnummer = rad;

@@ -18,10 +18,12 @@ public class Innlevering6 {
                 int rad = Integer.parseInt(deler[0]);
                 int kol = Integer.parseInt(deler[1]);
                 labyrint.finnUtveiFra(rad, kol);
-                
             } catch (Exception e) {
                 System.out.println("Ugyldig input, prøv igjen.\n");
             }
+
+            System.out.println("Her er labyrinten slik du gikk gjennom den: \n \n" + labyrint);
+            System.out.println("Skriv inn nye koordinater. (-1 for å avslutte)");
             linje = s.nextLine();
         }
         System.out.println("Program avsluttet.");

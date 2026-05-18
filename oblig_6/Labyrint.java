@@ -58,6 +58,13 @@ public class Labyrint {
 
     public void finnUtveiFra(int rad, int kol) {
         fantÅpning = false;
+        Rute.globalTeller = 1;
+
+        for (Rute[] rader : ruter) {
+            for (Rute rute : rader) {
+                if (rute instanceof HvitRute) {((HvitRute)rute).teller = 0;} // Nullstiller teller for hver gang man skriver inn koordinat
+            }
+        }
 
         if (ruter[rad][kol] instanceof SortRute) {
             System.out.println("Du kan ikke starte på en sort rute.");
