@@ -1,0 +1,3 @@
+interface Motordrevet {
+    int trekkraft();
+}
